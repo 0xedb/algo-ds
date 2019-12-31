@@ -1,5 +1,5 @@
 // insert(item)
-// preprend(item) 
+// preprend(item)
 // delete(index)
 // remove(item)
 // find
@@ -38,9 +38,9 @@ class CustomArray {
     if (this.loadfactor < 0.7) {
       const newCapacity = this.capacity / 2;
       for (let i = newCapacity; i < this.capacity; i++) {
-        delete this._array[i] 
+        delete this._array[i];
       }
-      this._capacity = newCapacity
+      this._capacity = newCapacity;
     }
     return deletedItem;
   }

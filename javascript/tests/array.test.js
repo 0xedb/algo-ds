@@ -19,3 +19,7 @@ test("3rd item is 3", () => {
 test("capacity to be 5", () => {
   expect(myArray.capacity).toBe(5)
 })
+
+test("size to be 4", () => {
+  expect(myArray.size).toBe(4)
+})
