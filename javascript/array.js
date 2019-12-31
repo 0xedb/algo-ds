@@ -2,7 +2,6 @@
 // preprend(item)
 // delete(index)
 // remove(item)
-// find
 
 class CustomArray {
   constructor() {
@@ -25,6 +24,15 @@ class CustomArray {
 
   get loadfactor() {
     return this.size / this.capacity;
+  }
+
+  find(item) {
+    for (let i = 0; i < this.size; i++) {
+      if (this._array[i] === item) {
+        return i;
+      }
+    }
+    return -1;
   }
 
   pop() {

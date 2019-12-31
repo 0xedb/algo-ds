@@ -6,14 +6,14 @@ test("size of new array", () => {
   expect(myArray.size).toBe(0);
 });
 
-test("3rd item is 3", () => {
+test("3rd item is 32", () => {
   myArray.push(100);
   myArray.push(20);
-  myArray.push(3);
-  myArray.push(3) 
-  myArray.push(3) 
+  myArray.push(32);
+  myArray.push(323) 
+  myArray.push(13) 
   myArray.pop()
-  expect(myArray.at(2)).toBe(3); 
+  expect(myArray.at(2)).toBe(32); 
 });
 
 test("capacity to be 5", () => {
@@ -23,3 +23,8 @@ test("capacity to be 5", () => {
 test("size to be 4", () => {
   expect(myArray.size).toBe(4)
 })
+
+test("find 32", () => {
+  expect(myArray.find(32)).toBe(2) 
+})
+
