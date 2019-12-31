@@ -1,11 +1,5 @@
-// size
-// push
-// capacity
-// at(index)
-// push(item)
 // insert(item)
-// preprend(item)
-// pop
+// preprend(item) 
 // delete(index)
 // remove(item)
 // find
@@ -33,8 +27,26 @@ class CustomArray {
     return this.size / this.capacity;
   }
 
+  pop() {
+    // reduce size
+    // slash capacity
+    let deletedItem;
+
+    if (this.size > 0) {
+      deletedItem = delete this._array[this._size-- - 1];
+    } else throw Error("nothing to remove");
+    if (this.loadfactor < 0.7) {
+      const newCapacity = this.capacity / 2;
+      for (let i = newCapacity; i < this.capacity; i++) {
+        delete this._array[i] 
+      }
+      this._capacity = newCapacity
+    }
+    return deletedItem;
+  }
+
   push(data) {
-    if (this.loadfactor > 0.7) {
+    if (this.loadfactor >= 0.7) {
       console.log("resizing...");
       const newArray = { ...this._array };
       const newCapacity = this._capacity * 2;
@@ -50,13 +62,12 @@ class CustomArray {
   }
 
   at(index) {
-    if(index < this.capacity) {
-      return this._array[index]
+    if (index < this.capacity) {
+      return this._array[index];
     } else {
-      throw Error("index out of bounds")
+      throw Error("index out of bounds");
     }
   }
-
 }
 
 module.exports = CustomArray;
