@@ -1,7 +1,3 @@
-// insert(item)
-// preprend(item)
-// delete(index)
-// remove(item)
 
 class CustomArray {
   constructor() {
@@ -33,6 +29,48 @@ class CustomArray {
       }
     }
     return -1;
+  }
+
+  remove(item) {
+    let found = find(item);
+    if (found === -1) return false;
+    else {
+      for(let i = 0; i < this.size; i++) {
+        // remove 
+        delete this._array[found]
+        // move over item
+        // reduce size
+        // decrease capacity as needed
+      }
+    }
+  }
+
+  checkAdjust() {
+    if (this.loadfactor >= 0.7) {
+      console.log("resizing...");
+      const newArray = { ...this._array };
+      const newCapacity = this._capacity * 2;
+      for (let i = this._capacity; i < newArray; i++) {
+        newArray[i] = null;
+      }
+      this._capacity = newCapacity;
+      this._array = newArray;
+    }
+  }
+
+  insert(item, index) {
+    // see if its at end
+    // insert and move over other items
+    // increase size
+    // call check capacity method
+  }
+
+  prepend(item) {
+    
+  }
+
+  delete(index) {
+
   }
 
   pop() {
