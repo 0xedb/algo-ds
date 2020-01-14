@@ -18,6 +18,27 @@ class Heap {
     }
   }
 
+  insert(data) {
+    this._heap.push(data);
+    this._currentIndex++;
+    this.heapifyInsert(this._currentIndex);
+    console.log("in\t", this._heap);
+  }
+
+  remove() {
+    if (this._currentIndex > 0) {
+      const removed = this._heap.pop();
+      this._currentIndex--;
+      if (this._currentIndex !== 0) {
+        this._heap[1] = removed;
+      }
+      this.heapifyRemove(1);
+    } else {
+      throw Error("Nothing to remove");
+    }
+    console.log("rem\t", this._heap);
+  }
+
   heapifyRemove(index) {
     // reorder on removal
     if (this._currentIndex > 1) {
@@ -42,25 +63,6 @@ class Heap {
     }
   }
 
-  insert(data) {
-    this._heap.push(data);
-    this._currentIndex++;
-    this.heapifyInsert(this._currentIndex);
-    console.log(this._heap);
-  }
-
-  remove() {
-    if (this._currentIndex > 0) {
-      const removed = this._heap.pop();
-      this._heap[1] = removed;
-      this._currentIndex--;
-      this.heapifyRemove(1);
-    } else {
-      throw Error("Nothing to remove");
-    }
-    console.log(this._heap);
-  }
-
   peek() {
     if (this._currentIndex > 0) {
       return this._heap[1];
@@ -70,13 +72,12 @@ class Heap {
 
 const pQueue = new Heap();
 pQueue.insert(10);
+pQueue.remove();
 pQueue.insert(9);
-pQueue.insert(10);
-pQueue.remove(); 
-console.log("least:\t", pQueue.peek());
+pQueue.insert(110);
+pQueue.remove();
 pQueue.insert(-100);
 pQueue.remove();
 pQueue.insert(-3);
 pQueue.insert(-203);
 pQueue.remove();
-console.log("least:\t", pQueue.peek());
