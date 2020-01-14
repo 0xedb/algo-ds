@@ -70,14 +70,14 @@ class Heap {
   }
 }
 
-const pQueue = new Heap();
-pQueue.insert(10);
-pQueue.remove();
-pQueue.insert(9);
-pQueue.insert(110);
-pQueue.remove();
-pQueue.insert(-100);
-pQueue.remove();
-pQueue.insert(-3);
-pQueue.insert(-203);
-pQueue.remove();
+const heap = new Heap();
+heap.insert(10);
+heap.remove();
+heap.insert(9);
+heap.insert(110);
+heap.remove();
+heap.insert(-100);
+heap.remove();
+heap.insert(-3);
+heap.insert(-203);
+heap.remove();
