@@ -1,14 +1,15 @@
-struct Node
-{
-  int val;
-  Node *next;
-  Node(int val) : val{val} {};
-};
+// struct inside class
+
 
 class MyCircularQueue
 {
 private:
-  Node *head, *tail;
+  struct Node
+  {
+    int val;
+    Node *next;
+    Node(int val) : val{val} {};
+  } * head, *tail;
   int length, capacity;
 
 public:
@@ -87,5 +88,3 @@ public:
  * bool param_5 = obj->isEmpty();
  * bool param_6 = obj->isFull();
  */
-
-
