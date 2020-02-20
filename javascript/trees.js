@@ -5,15 +5,15 @@ class Node {
     this.left = null
   }
 
-  function height(root) {
+  static function height(root) {
     if(!root) return -1;
     if(!root.right && !root.left) return 0;
 
-    if(root.right) {
-      let rightHeight = 1 + height(root.right)
-    } if(root.left) {
-      let 
-    }
+    let leftHeight = 0;
+    let rightHeight = 0;
+
+    if(root.left) leftHeight = 1 + height(root.left);
+    if(root.right) rightHeight = 1 + height(root.right);
 
     return Math.max(leftHeight, rightHeight);
   }
