@@ -28,6 +28,7 @@ sll.left.right = new Node(4)
 sll.right.left = new Node(15);
 sll.right.right = new Node(30);
 sll.right.right.right = new Node(45);
+sll.right.right.right.left = new Node(42);
 sll.right.right.right.right = new Node(60);
 console.log(Node.height(sll));
 
