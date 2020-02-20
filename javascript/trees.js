@@ -12,8 +12,8 @@ class Node {
     let leftHeight = 0;
     let rightHeight = 0;
 
-    if(root.left) leftHeight = 1 + height(root.left);
-    if(root.right) rightHeight = 1 + height(root.right);
+    if(root.left) leftHeight = 1 + Node.height(root.left);
+    if(root.right) rightHeight = 1 + Node.height(root.right);
 
     return Math.max(leftHeight, rightHeight);
   }
