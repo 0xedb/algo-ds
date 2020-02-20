@@ -4,6 +4,10 @@ class Node {
     this.right = null
     this.left = null
   }
+
+  function height() {
+    
+  }
 }
 
 
