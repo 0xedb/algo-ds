@@ -5,7 +5,7 @@ class Node {
     this.left = null
   }
 
-  static function height(root) {
+  static height(root) {
     if(!root) return -1;
     if(!root.right && !root.left) return 0;
 
@@ -29,6 +29,6 @@ sll.right.left = new Node(15);
 sll.right.right = new Node(30);
 sll.right.right.right = new Node(45);
 sll.right.right.right.right = new Node(60);
-
+console.log(Node.height(sll));
 
 console.dir(sll)
