@@ -20,16 +20,20 @@ class Node {
 }
 
 
-let sll = new Node(10);
-sll.left = new Node(-1);
-sll.right = new Node(21);
-sll.left.left = new Node(-10);
-sll.left.right = new Node(4)
-sll.right.left = new Node(15);
-sll.right.right = new Node(30);
-sll.right.right.right = new Node(45);
-sll.right.right.right.left = new Node(42);
-sll.right.right.right.right = new Node(60);
+let sll = new Node(1);
+sll.left = new Node(2);
+sll.left.left = new Node(4);
+sll.left.right = new Node(5);
+sll.right = new Node(3);
+// sll.left = new Node(-1);
+// sll.right = new Node(21);
+// sll.left.left = new Node(-10);
+// sll.left.right = new Node(4)
+// sll.right.left = new Node(15);
+// sll.right.right = new Node(30);
+// sll.right.right.right = new Node(45);
+// sll.right.right.right.left = new Node(42);
+// sll.right.right.right.right = new Node(60);
 console.log(Node.height(sll));
 
-console.dir(sll)
+// console.dir(sll)
