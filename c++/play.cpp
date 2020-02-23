@@ -5,6 +5,11 @@ namespace bruno
 std::string name{"Bruno"};
 }
 
+struct Node {
+  int data;
+  Node* next;
+};
+
 int main(void)
 {
   std::cout << bruno::name << std::endl;
@@ -24,4 +29,8 @@ int main(void)
   }
   else
     std::cout << "failed" << std::endl;
+
+
+  Node* latest = new Node{.data = 33};
+  std::cout << latest -> data << std::endl;
 }
