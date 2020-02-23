@@ -12,5 +12,7 @@ int main(void)
   std::string name{"Bruno Edoh"};
   std::cout << name[5] << std::endl;
   char my_name[] = "Bruno Edoh";
+  char* words = "sdrow";
+  std::cout << words << std::endl;
   std::cout << my_name << std::endl;
 }
