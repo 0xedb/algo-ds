@@ -11,4 +11,6 @@ int main(void)
   std::cout << "hello world" << std::endl;
   std::string name{"Bruno Edoh"};
   std::cout << name[5] << std::endl;
+  char my_name[] = "Bruno Edoh";
+  std::cout << my_name << std::endl;
 }
