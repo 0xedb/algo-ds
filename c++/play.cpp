@@ -10,6 +10,8 @@ struct Node {
   Node* next;
 };
 
+typedef std::string str;
+
 int main(void)
 {
   std::cout << bruno::name << std::endl;
@@ -33,4 +35,6 @@ int main(void)
 
   Node* latest = new Node{.data = 33};
   std::cout << latest -> data << std::endl;
+  str ok{"woww"};
+  std::cout << ok << "\n";
 }
