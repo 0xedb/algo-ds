@@ -32,7 +32,7 @@ int main(void)
   else
     std::cout << "failed" << std::endl;
 
-
+ 
   Node* latest = new Node{.data = 33};
   std::cout << latest -> data << std::endl;
   str ok{"woww"};
