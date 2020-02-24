@@ -37,4 +37,4 @@ int main(void)
   std::cout << latest -> data << std::endl;
   str ok{"woww"};
   std::cout << ok << "\n";
-}             
+}              
