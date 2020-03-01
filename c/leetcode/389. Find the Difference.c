@@ -15,3 +15,4 @@ char findTheDifference(char * s, char * t){
     return sum_t - sum_s;
 }
 
+ 
