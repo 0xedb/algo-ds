@@ -7,8 +7,7 @@ var findDuplicates = function(nums) {
   nums.forEach(val => {
     val = Math.abs(val);
     let value = nums[val - 1];
-    if (value < 0) {
-      // negative already seen
+    if (value < 0) { 
       ans.push(val);
     } else {
       nums[val - 1] = -value;
@@ -17,9 +16,6 @@ var findDuplicates = function(nums) {
   console.log(nums);
   return ans;
 };
-
-
-  
 
 
 
