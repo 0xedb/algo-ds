@@ -17,6 +17,8 @@ var findDuplicates = function(nums) {
   console.log(nums);
   return ans;
 };
+
+
   
 
 
