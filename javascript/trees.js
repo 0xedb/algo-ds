@@ -63,6 +63,7 @@ class Node {
           // min.right = null
           root.data = min.data
           root.right = min
+          min.data = null
           
         }
         return true;
