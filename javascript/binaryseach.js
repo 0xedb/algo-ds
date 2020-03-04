@@ -1,7 +1,7 @@
 let arr = [0, 1, 2, 3, 5, 93, 1000];
 
 function bSearch(ar, num) {
-  // console.log(ar)
+  console.table(ar)
   if(ar.length < 1) return false
   let mid = Number.parseInt(ar.length / 2);
 
@@ -17,5 +17,5 @@ function bSearch(ar, num) {
 }
 
 console.log();
-console.log(bSearch(arr, 2));
+console.log(bSearch(arr, 3));
 console.log();
