@@ -26,10 +26,4 @@ public:
     return mp1.size() == mp.size();
   }
 };
-
-// for _, val := range arr {
-//         v, ok := mp[val]
-//         if ok {
-//             mp1[v] = 0
-//         }
-//     }
+ 
