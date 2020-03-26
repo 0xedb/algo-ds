@@ -10,34 +10,43 @@
 
 // iterative
 
-class Solution {
-    vector<int> ans;
-    stack<TreeNode*> stk;
+class Solution
+{
+  vector<int> ans;
+  stack<TreeNode *> stk;
+
 public:
-    vector<int> postorderTraversal(TreeNode* root) {
-        if(root) {
-            TreeNode* l = root -> left;
-            TreeNode* r = root -> right;
-            root = new TreeNode(root -> val);
-            stk.push(root);
-            if(r) stk.push(r);
-            if(l) stk.push(l);
-            
-            
-            while(stk.size()) {
-                TreeNode* latest = stk.top();
-                if(!latest -> right && !latest -> left) {
-                    ans.push_back(latest -> val);
-                    stk.pop();
-                }
-                if(latest -> right) stk.push(latest -> right);
-                if(latest -> left) stk.push(latest -> left); 
-                latest -> left = nullptr;
-                latest -> right = nullptr;                   
-            }            
-        } 
-        return ans;
+  vector<int> postorderTraversal(TreeNode *root)
+  {
+    if (root)
+    {
+      TreeNode *l = root->left;
+      TreeNode *r = root->right;
+      root = new TreeNode(root->val);
+      stk.push(root);
+      if (r)
+        stk.push(r);
+      if (l)
+        stk.push(l);
+
+      while (stk.size())
+      {
+        TreeNode *latest = stk.top();
+        if (!latest->right && !latest->left)
+        {
+          ans.push_back(latest->val);
+          stk.pop();
+        }
+        if (latest->right)
+          stk.push(latest->right);
+        if (latest->left)
+          stk.push(latest->left);
+        latest->left = nullptr;
+        latest->right = nullptr;
+      }
     }
+    return ans;
+  }
 };
 
 // recursive
@@ -49,7 +58,7 @@ public:
 //         postorderTraversal(root -> left);
 //         postorderTraversal(root -> right);
 //         ans.push_back(root -> val);
-        
+
 //         return ans;
 //     }
 // };
