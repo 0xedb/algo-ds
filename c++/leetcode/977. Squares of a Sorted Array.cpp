@@ -20,3 +20,38 @@ public:
     return A;
   }
 };
+
+
+// better & faster
+class Solution
+{
+public:
+  vector<int> sortedSquares(vector<int> &A)
+  {
+    if (!A.size())
+      return A;
+    const int sz = A.size();
+    vector<int> b(sz, 0);
+    int start = 0;
+    int end = A.size() - 1;
+    int pos = end;
+
+    while (start <= end)
+    {
+      int sv = A[start] * A[start];
+      int ev = A[end] * A[end];
+
+      if (ev >= sv)
+      {
+        b[pos--] = ev;
+        end--;
+      }
+      else
+      {
+        b[pos--] = sv;
+        start++;
+      }
+    }
+    return b;
+  }
+};
