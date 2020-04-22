@@ -1,4 +1,4 @@
-/**
+26. Remove Duplicates from Sorted Array/**
  * Definition for a binary tree node.
  * function TreeNode(val) {
  *     this.val = val;
