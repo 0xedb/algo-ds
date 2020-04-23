@@ -66,3 +66,32 @@ void Solution::preorder(TreeNode *root)
   }
   num.pop_back();
 }
+
+// better
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution
+{
+public:
+  int preorder(TreeNode *, int);
+  int sumRootToLeaf(TreeNode *root)
+  {
+    return preorder(root, 0);
+  }
+};
+
+int Solution::preorder(TreeNode *root, int val)
+{
+  if (!root)
+    return 0;
+  val = (val * 2) + root->val;
+
+  return root->left == root->right ? val : preorder(root->left, val) + preorder(root->right, val);
+}
