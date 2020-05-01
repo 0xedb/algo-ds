@@ -11,9 +11,7 @@ var validateStackSequences = function (pushed, popped) {
     pushed[i++] = el;
 
     while (i > 0 && pushed[i - 1] === popped[j]) {
-      --i;
-      ++j;
-    }
+      --i; 
   });
 
   return i == 0;
