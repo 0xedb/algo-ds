@@ -14,3 +14,17 @@ var kidsWithCandies = function (candies, extraCandies) {
 
   return ans;
 };
+
+
+
+// 2 line solution
+/**
+ * @param {number[]} candies
+ * @param {number} extraCandies
+ * @return {boolean[]}
+ */
+var kidsWithCandies = function(candies, extraCandies) {    
+    let _max = Math.max(...candies) 
+    return candies.map((el) => el + extraCandies >= _max)
+};
+ 
