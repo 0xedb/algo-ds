@@ -12,3 +12,4 @@ var maximumProduct = function (nums) {
 
   return Math.max(first, second);
 };
+
