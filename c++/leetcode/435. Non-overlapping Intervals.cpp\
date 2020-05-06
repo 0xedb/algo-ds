@@ -1,0 +1,30 @@
+class Solution {
+public:
+    int eraseOverlapIntervals(vector<vector<int>>& intervals) {
+        int removals = 0;
+        
+        if(intervals.size() < 1) return removals;
+        
+        sort(intervals.begin(), intervals.end(), [](const vector<int>& a, const vector<int>& b)
+        {
+            return a[0] < b[0];
+        });
+        
+        int slow = 0;
+        int fast = 1;
+        
+        while(fast < intervals.size()) {
+            if(intervals[fast][0] < intervals[slow][1]){
+                ++removals; 
+            if(intervals[fast][1] < intervals[slow][1]) slow = fast;
+            }
+            
+            else 
+                slow = fast;
+            
+            ++fast;
+        }
+         
+        return removals;        
+    }
+};
