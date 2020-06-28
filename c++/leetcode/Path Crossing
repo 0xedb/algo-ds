@@ -1,0 +1,27 @@
+class Solution {
+public:
+    bool isPathCrossing(string path) {
+        unordered_set<string> visited; 
+        visited.insert("00");
+        
+        int x {}, y {};
+        
+        for(auto i : path) {
+            if(i == 'N')
+                ++y;
+            else if(i == 'S')
+                --y;
+            else if(i == 'E')
+                ++x;
+            else
+                --x;
+            
+            if(visited.find(to_string(x) + to_string(y)) != visited.end()) 
+                return true;
+                
+            visited.insert(to_string(x) + to_string(y));
+        }        
+
+        return false;
+    }
+};
